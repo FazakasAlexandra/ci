@@ -1,3 +1,5 @@
-const attack = (name, dmg, isCrit) => `${name} dealt ${isCrit ? dmg * 2 : dmg} dmg`;
+const attack = (name, dmg, isCrit) => {
+    return `${name} dealt ${isCrit ? dmg * 2 : dmg} dmg`
+}
 
-module.exports = attack;
+module.exports = attack
