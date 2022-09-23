@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "lint": "eslint .",
+    "fix:lint": "eslint . --fix",
     "ci:test": "jest --ci"
   },
   "keywords": [],
