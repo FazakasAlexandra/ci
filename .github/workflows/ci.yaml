@@ -1,8 +1,8 @@
 name: CI
 on: [push]
 jobs: 
-  eslint:
-    name: Lint code base
+  standard-checks:
+    name: Lint and Test
     runs-on: ubuntu-latest
 
     steps:
@@ -10,7 +10,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install packages
-        run: npm i
+        run: npm ci
       
       - name: Run ESlint
-        run: npm run lint
+        run: npm run fix:lint 
+
+      - name: Run tests
+        run: npm run ci:test
+
+      - name: Bundle and output
+        run: npm run build
